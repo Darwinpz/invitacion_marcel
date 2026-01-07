@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación a Mi Confirmación - Marcel Vladimir Pilaloa Ruiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sección Hero con imagen de portada -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Marcel Vladimir" class="profile-img">
+        <div class="hero-content fade-in">
+            <div class="cross-icon">✟</div>
+            <h1 class="nombre-principal">Marcel Vladimir Pilaloa Ruiz</h1>
+            <div class="divider"></div>
+            <h2 class="evento-titulo">Mi Confirmación 🕊️</h2>
+            <p class="confirmado-badge">VER INVITACIÓN</p>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Frase Religiosa -->
+    <section class="frase-religiosa slide-up">
+        <div class="container">
+            <p class="frase-texto">
+                <span class="quote-inline">"</span>Otra vez elijo a Dios para mi protección y para agradecerle quien soy.<span class="quote-inline">"</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Información del Evento -->
+    <section class="evento-info slide-up">
+        <div class="container">
+            <div class="info-card">
+                <div class="icon-circle">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Fecha</h3>
+                <p class="detail-text">Sábado, 10 de enero</p>
+                <p class="detail-time">2:00 p.m.</p>
+                <button onclick="agregarAlCalendario()" class="btn-calendario">
+                    <i class="fas fa-calendar-plus"></i> Agregar al Calendario
+                </button>
+            </div>
+
+            <div class="info-card">
+                <div class="icon-circle">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Lugar</h3>
+                <p class="detail-text">Casa Familia Pilaloa Zea</p>
+                <p class="detail-address">Paez y 8va C Norte Esq.</p>
+                <a href="https://maps.app.goo.gl/oxqdnC5pCm4ic9D77" target="_blank" class="btn-maps">
+                    <i class="fas fa-location-arrow"></i> Ver en Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Padres y Madrina -->
+    <section class="familia-section slide-up">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">✟</span>
+                Mis Padres y Madrina
+                <span class="title-icon">✟</span>
+            </h2>
+
+            <div class="familia-grid">
+                <div class="familia-card">
+                    <div class="familia-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h4>Mis Padres</h4>
+                    <p class="familia-nombre">Anl. Sist. Darwin Pilaloa Ruiz</p>
+                    <p class="familia-nombre">&</p>
+                    <p class="familia-nombre">Anl. Sist. Lorena Zea Herrera</p>
+                </div>
+
+                <div class="familia-card">
+                    <div class="familia-icon">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <h4>Mi Madrina</h4>
+                    <p class="familia-nombre">Lic. Monica Zea Vera, Mgs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mensaje Especial -->
+    <section class="mensaje-especial slide-up">
+        <div class="container">
+            <div class="mensaje-card">
+                <i class="fas fa-heart"></i>
+                <h3>Espero contar con su presencia</h3>
+                <div class="nota-importante">
+                    <i class="fas fa-swimming-pool"></i>
+                    <p><strong>Nota:</strong> No olvides traer tu traje de baño para pasar una tarde de piscina.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Confirmación -->
+    <section class="confirmacion-section slide-up">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">✟</span>
+                Confirmar Asistencia
+                <span class="title-icon">✟</span>
+            </h2>
+
+            <form id="confirmacionForm" class="confirmacion-form">
+                <div class="form-group">
+                    <label for="nombre">
+                        <i class="fas fa-user"></i> Nombre Completo *
+                    </label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn-submit btn-confirmar">
+                        <i class="fas fa-check-circle"></i> Confirmar Asistencia
+                    </button>
+                    <button type="button" class="btn-submit btn-rechazar" onclick="noAsistire()">
+                        <i class="fas fa-times-circle"></i> No asistiré
+                    </button>
+                </div>
+            </form>
+
+            <div id="mensajeRespuesta" class="mensaje-respuesta" style="display: none;"></div>
+        </div>
+    </section>
+
+    <!-- Álbum de Fotos -->
+    <section class="album-section slide-up">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">✟</span>
+                Visualiza las Fotos
+                <span class="title-icon">✟</span>
+            </h2>
+            <p class="album-descripcion">¡Comparte los momentos especiales de este día!</p>
+            <a href="https://www.icloud.com/sharedalbum/#B2H532ODWKXvDTp" target="_blank" class="btn-album">
+                <i class="fas fa-camera"></i> Álbum Compartido de iCloud
+            </a>
+        </div>
+    </section>
+
+    <!-- Compartir en Redes Sociales -->
+    <section class="compartir-section slide-up">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">✟</span>
+                Comparte la Invitación
+                <span class="title-icon">✟</span>
+            </h2>
+            <div class="compartir-buttons">
+                <button onclick="compartir('whatsapp')" class="btn-compartir btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Compartir por WhatsApp
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cross">✟</div>
+            <p>Con amor, Familia Pilaloa Zea</p>
+            <p class="footer-date">10 de enero de 2026</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
