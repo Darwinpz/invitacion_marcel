@@ -9,6 +9,9 @@ app = Flask(__name__)
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI", "mongodb://localhost:27017/confirmacion_db")
 mongo = PyMongo(app)
 
+# Configuración para producción
+app.config['JSON_AS_ASCII'] = False
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -61,4 +64,8 @@ def admin_confirmaciones():
     return render_template('confirmaciones.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Solo para desarrollo local
+    # En producción, Gunicorn maneja el puerto y host automáticamente
+    port = int(os.environ.get("PORT", 5000))
+    debug = os.environ.get("FLASK_ENV") != "production"
+    app.run(debug=debug, host='0.0.0.0', port=port)
