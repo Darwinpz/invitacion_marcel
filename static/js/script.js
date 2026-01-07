@@ -196,8 +196,9 @@ function compartir(red) {
     const texto = '🕊️ Te invito a mi Confirmación - Marcel Vladimir Pilaloa Ruiz\n\n📅 Sábado, 10 de enero - 2:00 p.m.\n📍 Machala, El Oro, Ecuador\n\n';
 
     if (red === 'whatsapp') {
-        const shareUrl = `https://wa.me/?text=${encodeURIComponent(texto + url)}`;
-        window.open(shareUrl, '_blank', 'width=600,height=400');
+        const mensajeCompleto = texto + url;
+        const shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensajeCompleto)}`;
+        window.open(shareUrl, '_blank');
     }
 }
 

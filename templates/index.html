@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación a Mi Confirmación - Marcel Vladimir Pilaloa Ruiz</title>
+    <meta name="description" content="Te invito a celebrar mi Confirmación el sábado 10 de enero a las 2:00 p.m. en Machala, El Oro, Ecuador.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:title" content="Invitación a Mi Confirmación - Marcel Vladimir Pilaloa Ruiz">
+    <meta property="og:description" content="🕊️ Te invito a celebrar mi Confirmación. Sábado, 10 de enero - 2:00 p.m. | Machala, El Oro, Ecuador">
+    <meta property="og:image" content="{{ request.url_root }}{{ url_for('static', filename='images/profile.png')[1:] }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ request.url }}">
+    <meta property="twitter:title" content="Invitación a Mi Confirmación - Marcel Vladimir Pilaloa Ruiz">
+    <meta property="twitter:description" content="🕊️ Te invito a celebrar mi Confirmación. Sábado, 10 de enero - 2:00 p.m. | Machala, El Oro, Ecuador">
+    <meta property="twitter:image" content="{{ request.url_root }}{{ url_for('static', filename='images/profile.png')[1:] }}">
+
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
