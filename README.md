@@ -1,4 +1,4 @@
-# Invitación a Mi Confirmación - Marcel Vladimir Pilaloa Ruiz
+# Invitación a Mi Confirmación - Marcel Vladimir Pilaloa Zea
 
 Web de invitación elegante y responsive para el evento de Confirmación.
 
@@ -154,7 +154,7 @@ Para problemas o preguntas, contacta al desarrollador.
 
 ## Licencia
 
-Este proyecto fue creado para el evento de Confirmación de Marcel Vladimir Pilaloa Ruiz.
+Este proyecto fue creado para el evento de Confirmación de Marcel Vladimir Pilaloa Zea.
 
 ---
 

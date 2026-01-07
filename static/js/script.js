@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Función para compartir por WhatsApp
 function compartir(red) {
     const url = window.location.href;
-    const texto = '🕊️ Te invito a mi Confirmación - Marcel Vladimir Pilaloa Ruiz\n\n📅 Sábado, 10 de enero - 2:00 p.m.\n📍 Machala, El Oro, Ecuador\n\n';
+    const texto = '🕊️ Te invito a mi Confirmación - Marcel Vladimir Pilaloa Zea\n\n📅 Sábado, 10 de enero - 2:00 p.m.\n📍 Machala, El Oro, Ecuador\n\n';
 
     if (red === 'whatsapp') {
         const mensajeCompleto = texto + url;
@@ -206,7 +206,7 @@ function compartir(red) {
 function agregarAlCalendario() {
     // Datos del evento
     const evento = {
-        titulo: 'Confirmación de Marcel Vladimir Pilaloa Ruiz',
+        titulo: 'Confirmación de Marcel Vladimir Pilaloa Zea',
         descripcion: 'Celebración de Mi Confirmación. No olvides traer tu traje de baño para pasar una tarde de piscina.',
         ubicacion: 'Paez y 8va C Norte Esq., Machala, El Oro, Ecuador',
         fechaInicio: '20260110T140000', // 10 de enero de 2026, 2:00 PM
