@@ -124,6 +124,15 @@ body {
                  0 0 10px rgba(0, 0, 0, 0.7);
 }
 
+.paloma-gif {
+    height: 1.5em;
+    width: auto;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 10px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.9));
+}
+
 .confirmado-badge {
     display: inline-block;
     background-color: var(--color-gold);
@@ -657,12 +666,11 @@ body {
 
 .footer p {
     margin: 10px 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .footer-date {
     font-family: var(--font-serif);
-    font-size: 1.3rem;
     color: var(--color-gold);
 }
 
